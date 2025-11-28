@@ -1,11 +1,12 @@
-import './App.css'
+import "./App.css";
+import Header from "./components/Layout/Header/Header";
 
 function App() {
   return (
-   <div>
-    Hello
-   </div>
-  )
+    <div>
+      <Header/>
+    </div>
+  );
 }
 
-export default App
+export default  App;
