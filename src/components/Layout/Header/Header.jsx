@@ -18,7 +18,8 @@ const Header = () => {
         </div>
         <div className={styles.closeSection}>
           <button className={styles.closeBtn} aria-label="Close">
-            <X size={30} strokeWidth={1} strokeLinecap="round" />
+            <X size={30} strokeWidth={1} strokeLinecap="round" 
+            />
           </button>
         </div>
       </header>
