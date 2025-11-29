@@ -1,0 +1,43 @@
+.fieldLabel {
+  display: block;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px; 
+  font-weight: 500;
+}
+
+.gender {
+  width: 221px;
+}
+
+.genderGroup {
+  display: flex;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 37px; 
+}
+
+.genderBtn {
+  flex: 1;
+  border: none;
+  background: white;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-right: 1px solid #E2E8F0;
+  transition: all 0.2s;
+}
+
+.genderBtn:last-child {
+  border-right: none;
+}
+
+.genderBtn:hover {
+  background-color: #f8fafc;
+}
+
+.activeGender {
+  background-color: #f1f5f9bf;
+}

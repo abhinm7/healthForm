@@ -1,5 +1,5 @@
 .identificationDetails {
-  margin-top: 20px;
+  margin-top: 17px;
 }
 
 .header {
@@ -14,18 +14,21 @@
   color: #1e293b;
   margin: 0;
 }
-
+.inputDetails{
+  display: flex;
+  width: 1103px;
+}
 .identityGrid {
   display: flex;
-  gap: 20px;
-  width: 100%;
+  gap: 16px;
+  width: 1189px;
 }
 
 .mainDetails {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  min-width: 250px;
+  min-width: 441px;
   padding: 5px;
   gap: 10px;
 }
@@ -52,3 +55,24 @@
 .dob {
   width: 180px;
 }
+.dateGroups{
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+.orText{
+  display: block;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.subDetails {
+  display: flex;
+  align-items: center;
+  width: 630px;
+  justify-content: space-evenly;
+  flex: 3;
+  padding: 10px;
+}
+
