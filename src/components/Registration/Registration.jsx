@@ -4,6 +4,7 @@ import TabNavigation from '../Common/TabNav/TabNav'
 import IdentificationDetails from './IdentificationDetails/IdentificationDetails'
 import ContactDetails from './ContactDetails/ContactDetails'
 import KycDocuments from './KYCDetails/KYCDetails'
+import Preferences from './Preferences/Preferences'
 
 const Registration = () => {
   return (
@@ -12,6 +13,7 @@ const Registration = () => {
       <IdentificationDetails/>
       <ContactDetails/>
       <KycDocuments/>
+      <Preferences/>
     </div>
   )
 }
