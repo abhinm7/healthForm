@@ -14,12 +14,13 @@
   border: 1px solid #E2E8F0;
   border-radius: 6px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   outline: none;
   transition: all 0.2s ease-in-out;
-  color: #334155;
+  color: #64748b;
   background: transparent;
   line-height: normal; 
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.06);
 }
 
 .label {
@@ -27,7 +28,8 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: #94A3B8;
+  color: #64748b;
+  font-weight: 400;
   font-size: 13px;
   pointer-events: none;
   transition: all 0.2s ease-in-out;

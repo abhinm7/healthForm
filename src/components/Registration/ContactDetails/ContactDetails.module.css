@@ -1,0 +1,82 @@
+.container {
+  margin-top: 30px;
+  background: white;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.formLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* gap between rows */
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  /* gap between columns */
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+
+.box {
+  flex-shrink: 0;
+}
+
+/* widths only */
+.w200 {
+  width: 200px;
+}
+
+.w112 {
+  width: 112px;
+}
+
+.w179 {
+  width: 179px;
+}
+
+.w156 {
+  width: 156px;
+}
+
+.w140 {
+  width: 140px;
+}
+
+.w42 {
+  width: 42px;
+}
+
+.w403 {
+  width: 403px;
+}
+
+.w465 {
+  width: 465px;
+}
+
+.w337 {
+  width: 337px;
+}
+
+.staticBox {
+  height: 36px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.06);
+}
