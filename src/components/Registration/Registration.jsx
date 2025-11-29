@@ -3,6 +3,7 @@ import styles from './Registration.module.css'
 import TabNavigation from '../Common/TabNav/TabNav'
 import IdentificationDetails from './IdentificationDetails/IdentificationDetails'
 import ContactDetails from './ContactDetails/ContactDetails'
+import KycDocuments from './KYCDetails/KYCDetails'
 
 const Registration = () => {
   return (
@@ -10,6 +11,7 @@ const Registration = () => {
       <TabNavigation/>
       <IdentificationDetails/>
       <ContactDetails/>
+      <KycDocuments/>
     </div>
   )
 }
