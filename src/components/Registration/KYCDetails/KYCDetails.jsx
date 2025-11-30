@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./KycDetails.module.css";
+import styles from "./KYCDetails.module.css";
 
 const KycDocuments = ({ data, onChange, errors }) => {
 
