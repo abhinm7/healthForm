@@ -3,7 +3,7 @@ import styles from "./Registration.module.css";
 import TabNavigation from "../Common/TabNav/TabNav";
 import IdentificationDetails from "./IdentificationDetails/IdentificationDetails";
 import ContactDetails from "./ContactDetails/ContactDetails";
-import KycDocuments from "./KycDetails/KycDetails";
+import KYCDocuments from "./KYCDetails/KYCDetails";
 import Preferences from "./Preferences/Preferences";
 import ActionBar from "./ActionBar/ActionBar";
 import Toast from "../Common/Toast/Toast";
@@ -65,7 +65,7 @@ const Registration = () => {
           onChange={handleChange}
           errors={errors}
         />
-        <KycDocuments data={formData} onChange={handleChange} errors={errors} />
+        <KYCDocuments data={formData} onChange={handleChange} errors={errors} />
         <Preferences data={formData} onChange={handleChange} />
       </div>
       <ActionBar
