@@ -3,7 +3,7 @@ import styles from "./Registration.module.css";
 import TabNavigation from "../Common/TabNav/TabNav";
 import IdentificationDetails from "./IdentificationDetails/IdentificationDetails";
 import ContactDetails from "./ContactDetails/ContactDetails";
-import KycDocuments from "./KYCDetails/KYCDetails";
+import KycDocuments from "./KycDetails/KycDetails";
 import Preferences from "./Preferences/Preferences";
 import ActionBar from "./ActionBar/ActionBar";
 import Toast from "../Common/Toast/Toast";
