@@ -6,7 +6,7 @@ const DateBox = ({ placeholder, value, onChange, ...props }) => {
     <div className={styles.container}>
       <input
         className={styles.input}
-        type="text"
+        type="number"
         maxLength={2}
         value={value}
         onChange={onChange}

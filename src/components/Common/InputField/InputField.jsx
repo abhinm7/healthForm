@@ -14,7 +14,7 @@ const InputField = ({ label, value, onChange, type = "text", ...props }) => {
       />
       <label className={styles.label}>
         {label}
-      </label>
+      </label> 
     </div>
   );
 };

@@ -9,7 +9,6 @@ function App() {
       <Header />
       <div className="registration-section">
         <Registration />
-        <ActionBar />
       </div>
     </div>
   );

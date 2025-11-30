@@ -4,8 +4,16 @@ import ProfilePic from "../../Common/ProfilePic/ProfilePic";
 import InputField from "../../Common/InputField/InputField";
 import GenderButton from "../../Common/GenderButton/GenderButton";
 import DateInputGroup from "../../Common/DateInputGroup/DateInputGroup";
+import { getRelatedDateUpdates } from "../../../utils/datecalculations";
 
-const IdentificationDetails = () => {
+const IdentificationDetails = ({ data, onChange, errors }) => {
+  const handleDateChange = (field, val) => {
+    const updates = getRelatedDateUpdates(field, val, data);
+    Object.entries(updates).forEach(([key, value]) => {
+      onChange(key, value);
+    });
+  };
+
   return (
     <div className={styles.identificationDetails}>
       <div className={styles.header}>
@@ -16,25 +24,62 @@ const IdentificationDetails = () => {
         <div className={styles.inputDetails}>
           <div className={styles.mainDetails}>
             <div className={styles.phone}>
-              <InputField label="Enter Mobile Number *" />
+              <InputField
+                label="Enter Mobile Number *"
+                value={data.mobile}
+                onChange={(e) => onChange("mobile", e.target.value)}
+                error={errors.mobile}
+                type="number"
+              />
             </div>
+
             <div className={styles.names}>
-              <InputField label="First Name*" />
-              <InputField label="Second Name*" />
+              <InputField
+                label="First Name*"
+                value={data.firstName}
+                onChange={(e) => onChange("firstName", e.target.value)}
+                error={errors.firstName}
+              />
+
+              <InputField
+                label="Last Name*"
+                value={data.lastName}
+                onChange={(e) => onChange("lastName", e.target.value)}
+                error={errors.lastName}
+              />
             </div>
           </div>
 
           <div className={styles.subDetails}>
-            <GenderButton />
+            <GenderButton
+              selected={data.gender}
+              onSelect={(val) => onChange("gender", val)}
+            />
             <div className={styles.dateGroups}>
               <div className={styles.dobContainer}>
-                <DateInputGroup label="Age*" />
+                <DateInputGroup
+                  label="Age*"
+                  yy={data.ageYY}
+                  mm={data.ageMM}
+                  dd={data.ageDD}
+                  onChangeYY={(e) => handleDateChange("ageYY", e.target.value)}
+                  onChangeMM={(e) => handleDateChange("ageMM", e.target.value)}
+                  onChangeDD={(e) => handleDateChange("ageDD", e.target.value)}
+                />
               </div>
 
               <span className={styles.orText}>OR</span>
 
               <div className={styles.dobContainer}>
-                <DateInputGroup label="Date of Birth*" />
+                <DateInputGroup
+                  label="Date of Birth*"
+                  yy={data.dobYY}
+                  mm={data.dobMM}
+                  dd={data.dobDD}
+                  onChangeYY={(e) => handleDateChange("dobYY", e.target.value)}
+                  onChangeMM={(e) => handleDateChange("dobMM", e.target.value)}
+                  onChangeDD={(e) => handleDateChange("dobDD", e.target.value)}
+                />
               </div>
             </div>
           </div>
