@@ -43,7 +43,7 @@ const Registration = () => {
 
   const handleChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-    
+
     if (errors[field]) {
       setErrors((prev) => ({ ...prev, [field]: "" }));
     }
@@ -62,7 +62,11 @@ const Registration = () => {
           onChange={handleChange}
           errors={errors}
         />
-        <ContactDetails />
+        <ContactDetails
+          data={formData}
+          onChange={handleChange}
+          errors={errors}
+        />
         <KycDocuments />
         <Preferences />
       </div>
