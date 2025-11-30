@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Preferences.module.css";
 
-const Preferences = () => {
-  const [consent, setConsent] = useState(true); 
-  const [language, setLanguage] = useState("Odia");
+const Preferences = ({ data, onChange }) => {
 
   return (
     <div className={styles.container}>
@@ -14,15 +12,16 @@ const Preferences = () => {
           <div className={styles.textGroup}>
             <h6 className={styles.itemTitle}>Consent for Medical Research</h6>
             <p className={styles.itemDesc}>
-              These cookies are essential in order to use the website and use its features.
+              These cookies are essential in order to use the website and use
+              its features.
             </p>
           </div>
-          
+
           <label className={styles.switch}>
-            <input 
-              type="checkbox" 
-              checked={consent} 
-              onChange={(e) => setConsent(e.target.checked)} 
+            <input
+              type="checkbox"
+              checked={data.consent}
+              onChange={(e) => onChange("consent", e.target.checked)}
             />
             <span className={styles.slider}></span>
           </label>
@@ -33,12 +32,12 @@ const Preferences = () => {
             <h6 className={styles.itemTitle}>Communication Preferences</h6>
             <p className={styles.itemDesc}>Default Communication Language</p>
           </div>
-          
+
           <div className={styles.selectWrapper}>
-            <select 
+            <select
               className={styles.select}
-              value={language}
-              onChange={(e) => setLanguage(e.target.value)}
+              value={data.language}
+              onChange={(e) => onChange("language", e.target.value)}
             >
               <option value="Odia">Odia</option>
               <option value="English">English</option>
@@ -46,7 +45,6 @@ const Preferences = () => {
             </select>
           </div>
         </div>
-
       </div>
     </div>
   );

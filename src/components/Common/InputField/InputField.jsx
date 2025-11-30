@@ -11,6 +11,7 @@ const InputField = ({ label, value, onChange, type = "text", ...props }) => {
         onChange={onChange}
         placeholder=" " 
         {...props}
+        required
       />
       <label className={styles.label}>
         {label}
