@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 6px;
+}
+
+.successCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 240px;
+  border: 1px dashed #E2E8F0;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  gap: 8px;
+  color: #71717A;
+}
+
+.statusLabel {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #09090B;
+}
+
+.checkIcon {
+  font-size: 24px;
+}
+
+.detailsGrid {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  line-height: 28px;
+  width: 213px;
+}
+
+.label {
+  font-weight: 400;
+}
+
+.value {
+  font-weight: 700;
+}
+
+.metaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.actionBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 123px;
+  background: white;
+  border: 2px solid #F1F5F9;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #020817;
+  font-size: 13px;
+  font-weight: 400;
+}
+.actionBtn:hover {
+  border-color: #2563EB;
+}
