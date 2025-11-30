@@ -1,8 +1,9 @@
 .container {
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid #e0e0e0;
-  max-width: 100%; 
-  margin: 0 auto;
+  width: 1280px;
+  position: fixed;
+  top:0
 }
 
 .headerContent {

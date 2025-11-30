@@ -5,10 +5,10 @@ import Registration from "./components/Registration/Registration";
 function App() {
   return (
     <div className="wrapper">
-      <Header/>
-      <Registration/>
+      <Header />
+        <Registration />
     </div>
   );
 }
 
-export default  App;
+export default App;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Preferences.module.css";
 
 const Preferences = () => {
-  const [consent, setConsent] = useState(true); // Default ON like image
+  const [consent, setConsent] = useState(true); 
   const [language, setLanguage] = useState("Odia");
 
   return (
