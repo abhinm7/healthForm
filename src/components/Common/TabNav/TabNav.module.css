@@ -3,27 +3,23 @@
   background-color: #F1F5F9;
   padding: 5px;
   border-radius: 8px;
-  gap: 2px;
+  gap: 6px;
   width: 100%;
-  max-width: 400px;
+  max-width: 430px;
   height: 36px;
-  overflow: hidden;
+  justify-content: center;
 }
 
 .tab {
-  flex: 1;
-  text-align: center;
-  border: none;
-  background: transparent;
-  padding: 6px 2px;
+  padding: 6px 14px;
   border-radius: 5px;
   font-size: 13px;
   color: #94A3B8;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  cursor: pointer;
+  min-width: 75px;
 }
 
 .tab:hover:not(.activeTab) {
@@ -41,10 +37,12 @@
   .tabContainer {
     height: auto;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .tab {
     flex-basis: 48%;
+    text-align: center;
     margin-bottom: 2px;
   }
 }
