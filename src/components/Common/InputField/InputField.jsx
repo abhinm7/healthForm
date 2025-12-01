@@ -2,11 +2,12 @@ import React from 'react';
 import styles from './InputField.module.css';
 
 const InputField = ({ label, value, onChange, onBlur, type = "text", error, ...props }) => {
+  let inputLabel = error?error:label
   return (
     <div className={styles.wrapper}>
       <div className={`${styles.inputContainer} ${error ? styles.errorBorder : ''}`}>
         <input
-          className={styles.input}
+          className={`${styles.input} ${error ? styles.errorInput : ''}`}
           type={type}
           value={value}
           onChange={onChange}
@@ -18,9 +19,8 @@ const InputField = ({ label, value, onChange, onBlur, type = "text", error, ...p
         <label className={`${styles.label} ${error ? styles.errorLabel : ''}`}>
           {label}
         </label> 
-      </div>
-      {/* Show error message if it exists */}
       {error && <span className={styles.errorMessage}>{error}</span>}
+      </div>
     </div>
   );
 };

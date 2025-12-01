@@ -52,7 +52,9 @@ export const validateForm = (data) => {
     if (!data.attendantRel) errors.attendantRel = "Attendant relationship is required";
 
     // Email
-
+    if (!data.email) {
+        errors.email = "Email required";
+    }
     if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
         errors.email = "Invalid email format";
     }
