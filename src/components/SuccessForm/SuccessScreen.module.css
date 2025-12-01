@@ -94,6 +94,22 @@
   font-size: 13px;
   font-weight: 400;
 }
+
 .actionBtn:hover {
   border-color: #2563EB;
+}
+
+@media(max-width:725px){
+  .actions{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .actionBtn{
+    width: calc(50% - 10px);
+  }
+}
+@media(max-width:512px){
+.title{
+  font-size: 20px;
+}
 }
