@@ -1,7 +1,7 @@
 .container {
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid #e0e0e0;
-  width: 1280px;
+  width: 100%;
   position: fixed;
   top:0;
   z-index: 100;
@@ -79,4 +79,10 @@
 
 .closeBtn:hover {
   background-color: #eaeaea;
+}
+
+@media (max-width:800px) {
+  .tabItem{
+    font-size: 14px;
+  }
 }

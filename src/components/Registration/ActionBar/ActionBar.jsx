@@ -9,7 +9,7 @@ const ActionBar = ({ onRegister, onCancel }) => {
       <div className={styles.container}>
         <div className={styles.priceSection}>
           <p>
-            Registartion charge : <span>{charge}</span>
+            Registration charge : <span>{charge}</span>
           </p>
         </div>
         <div className={styles.actions}>

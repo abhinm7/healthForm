@@ -1,25 +1,60 @@
-.actionBar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 78px;
-    background: #F4F4F5;
+.actionBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 78px;
+  background: #F4F4F5;
+  margin-top: auto;
 }
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 98%;
-    height: 36px;
-    padding-left: 14px;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
-.priceSection p{
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 16px;
+
+.priceSection p {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #09090B;
+  margin: 0;
 }
+
+.priceSection span {
+  font-weight: 700;
+}
+
 .actions {
   display: flex;
-  gap: 16px; 
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .actionBar {
+    height: auto;
+    padding: 16px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+    padding: 0 16px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .actions button {
+    flex: 1;
+  }
 }

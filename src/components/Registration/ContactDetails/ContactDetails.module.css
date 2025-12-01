@@ -15,57 +15,28 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* gap between rows */
 }
 
 .row {
   display: flex;
   gap: 8px;
-  /* gap between columns */
   align-items: flex-end;
   flex-wrap: nowrap;
 }
 
-.box {
+.w200, .w112, .w179, .w156, .w140, .w42, .w403, .w465, .w337 {
   flex-shrink: 0;
 }
 
-/* widths only */
-.w200 {
-  width: 200px;
-}
-
-.w112 {
-  width: 112px;
-}
-
-.w179 {
-  width: 179px;
-}
-
-.w156 {
-  width: 156px;
-}
-
-.w140 {
-  width: 140px;
-}
-
-.w42 {
-  width: 42px;
-}
-
-.w403 {
-  width: 403px;
-}
-
-.w465 {
-  width: 465px;
-}
-
-.w337 {
-  width: 337px;
-}
+.w200 { width: 200px; }
+.w112 { width: 112px; }
+.w179 { width: 179px; }
+.w156 { width: 156px; }
+.w140 { width: 140px; }
+.w42  { width: 42px; }
+.w403 { width: 403px; }
+.w465 { width: 465px; }
+.w337 { width: 337px; }
 
 .staticBox {
   height: 36px;
@@ -78,4 +49,23 @@
   font-size: 13px;
   font-weight: 600;
   box-shadow: 0px 1px 3px rgba(0,0,0,0.06);
+}
+
+@media (max-width: 1024px) {
+  .row {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .w200, .w403, .w465, .w337 {
+    width: 100% !important;
+    min-width: 0;
+    flex-basis: 100%;
+  }
+
+  .w112, .w179, .w156, .w140, .w42 {
+    width: calc(50% - 4px) !important;
+    min-width: 0;
+    flex-basis: calc(50% - 4px);
+  }
 }

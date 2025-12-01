@@ -2,7 +2,7 @@
   margin-top: 17px;
 }
 
-.header { 
+.header {
   margin-bottom: 8px;
 }
 
@@ -13,14 +13,16 @@
   line-height: 16px;
   letter-spacing: 2.5%;
 }
-.inputDetails{
+
+.inputDetails {
   display: flex;
-  width: 1103px;
+  width: 100%;
 }
+
 .identityGrid {
   display: flex;
   gap: 16px;
-  width: 1189px;
+  width: 100%;
 }
 
 .mainDetails {
@@ -38,7 +40,7 @@
 }
 
 .names > div {
-  flex: 1; 
+  flex: 1;
 }
 
 .gender {
@@ -54,24 +56,59 @@
 .dob {
   width: 180px;
 }
-.dateGroups{
+
+.dateGroups {
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 }
-.orText{
+
+.orText {
   display: block;
   font-size: 13px;
   color: #64748b;
   margin-bottom: 8px;
   font-weight: 500;
 }
+
 .subDetails {
   display: flex;
   align-items: center;
-  width: 630px;
   justify-content: space-evenly;
-  flex: 3;
+  flex: 1;
   padding: 10px;
+  width: auto;
 }
 
+@media (max-width: 1024px) {
+  .identityGrid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inputDetails {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mainDetails {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .subDetails {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .dateGroups {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .names {
+    flex-wrap: wrap;
+  }
+}
