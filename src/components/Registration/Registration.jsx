@@ -39,7 +39,7 @@ const Registration = () => {
     setToast({ type: "success", message: "Registration Successful!" });
   };
 
-  if (isSuccess) {
+  if (isSuccess) { 
     return (
       <div className={styles.container}>
         {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
