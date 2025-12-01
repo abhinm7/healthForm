@@ -36,7 +36,7 @@
 
 .active {
   font-weight: 600;
-  background-color: #af52de0d;
+  background-color: #f1f5f982;
 }
 
 .active::after {
@@ -58,8 +58,8 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 11px;
+  font-weight: 500;
 }
 .closeSection{
     padding: 20px;

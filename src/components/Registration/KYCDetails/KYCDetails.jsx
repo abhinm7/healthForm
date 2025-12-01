@@ -59,9 +59,7 @@ const KycDocuments = ({ data, onChange, errors }) => {
         </label>
 
         <label className={styles.uploadBtn}>
-          <span style={{ marginRight: 5 }}>
-            <img src="/settings.svg" alt="settings" width={18} />
-          </span>
+          <img src="/settings.svg" alt="settings" width={16} />
           <input
             type="file"
             hidden
