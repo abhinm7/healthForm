@@ -6,7 +6,7 @@ import GenderButton from "../../Common/GenderButton/GenderButton";
 import DateInputGroup from "../../Common/DateInputGroup/DateInputGroup";
 import { getRelatedDateUpdates } from "../../../utils/datecalculations";
 
-const IdentificationDetails = ({ data, onChange, errors }) => {
+const IdentificationDetails = ({ data, onChange, onBlur, errors }) => {
   const handleDateChange = (field, val) => {
     const updates = getRelatedDateUpdates(field, val, data);
     Object.entries(updates).forEach(([key, value]) => {
@@ -28,6 +28,7 @@ const IdentificationDetails = ({ data, onChange, errors }) => {
                 label="Enter Mobile Number *"
                 value={data.mobile}
                 onChange={(e) => onChange("mobile", e.target.value)}
+                onBlur={() => onBlur && onBlur("mobile")}
                 error={errors.mobile}
                 type="number"
               />
@@ -38,6 +39,7 @@ const IdentificationDetails = ({ data, onChange, errors }) => {
                 label="First Name*"
                 value={data.firstName}
                 onChange={(e) => onChange("firstName", e.target.value)}
+                onBlur={() => onBlur && onBlur("firstName")}
                 error={errors.firstName}
               />
 
@@ -45,6 +47,7 @@ const IdentificationDetails = ({ data, onChange, errors }) => {
                 label="Last Name*"
                 value={data.lastName}
                 onChange={(e) => onChange("lastName", e.target.value)}
+                onBlur={() => onBlur && onBlur("lastName")}
                 error={errors.lastName}
               />
             </div>

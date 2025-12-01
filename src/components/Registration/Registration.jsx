@@ -12,26 +12,43 @@ import SuccessScreen from "../SuccessForm/SuccessScreen";
 import { usePatientForm } from "../../hooks/usePatientForm";
 
 const Registration = () => {
-  const { formData, errors, setErrors, handleChange, resetForm } = usePatientForm();
-  
+  const { formData, errors, setErrors, handleChange, resetForm } =
+    usePatientForm();
+
   const [toast, setToast] = useState(null);
   const [submittedData, setSubmittedData] = useState(null);
   const [isSuccess, setIsSuccess] = useState(false);
 
-   const handleSubmit = () => {
+  const handleBlur = (field) => {
+    // Run full validation to check this specific field
+    const currentErrors = validateForm(formData);
+
+    if (currentErrors[field]) {
+      // If error exists for this field, set it
+      setErrors((prev) => ({ ...prev, [field]: currentErrors[field] }));
+    } else {
+      setErrors((prev) => {
+        const newErrors = { ...prev };
+        delete newErrors[field];
+        return newErrors;
+      });
+    }
+  };
+
+  const handleSubmit = () => {
     const newErrors = validateForm(formData);
-    
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       const firstErrorMsg = Object.values(newErrors)[0];
       setToast({ type: "error", message: firstErrorMsg });
-      return; 
+      return;
     }
 
     const successPayload = {
       ...formData,
       uhid: `IGH-${Math.floor(100000 + Math.random() * 900000)}`,
-      billNo: `FB${Math.floor(10000000 + Math.random() * 90000000)}`
+      billNo: `FB${Math.floor(10000000 + Math.random() * 90000000)}`,
     };
 
     setSubmittedData(successPayload);
@@ -39,38 +56,61 @@ const Registration = () => {
     setToast({ type: "success", message: "Registration Successful!" });
   };
 
-  if (isSuccess) { 
+  if (isSuccess) {
     return (
       <div className={styles.container}>
-        {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
-        <SuccessScreen 
-          data={submittedData} 
-        />
+        {toast && (
+          <Toast
+            message={toast.message}
+            type={toast.type}
+            onClose={() => setToast(null)}
+          />
+        )}
+        <SuccessScreen data={submittedData} />
       </div>
     );
   }
-  
+
   return (
     <>
       <div className={styles.container}>
-        {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
+        {toast && (
+          <Toast
+            message={toast.message}
+            type={toast.type}
+            onClose={() => setToast(null)}
+          />
+        )}
         <TabNavigation />
         <IdentificationDetails
           data={formData}
           onChange={handleChange}
+          onBlur={handleBlur}
           errors={errors}
         />
         <ContactDetails
           data={formData}
           onChange={handleChange}
+          onBlur={handleBlur}
           errors={errors}
         />
-        <KycDocuments data={formData} onChange={handleChange} errors={errors} />
-        <Preferences data={formData} onChange={handleChange} />
+        <KycDocuments
+          data={formData}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          errors={errors}
+        />
+        <Preferences
+          data={formData}
+          onBlur={handleBlur}
+          onChange={handleChange}
+        />
       </div>
       <ActionBar
         onRegister={handleSubmit}
-        onCancel={() => setToast({type: 'error', message: 'Registration Cancelled'})} 
+        onCancel={() =>
+          setToast({ type: "error", message: "Registration Cancelled" })
+        }
       />
     </>
   );
